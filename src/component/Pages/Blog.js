@@ -46,7 +46,6 @@ const Blog = () => {
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton />
                     <Modal.Body><AddNewBlog handleAddNew={handleAddNew} /></Modal.Body>
-
                 </Modal>
             </>
             <>
@@ -56,11 +55,14 @@ const Blog = () => {
                             <div key={item.id} className="single-blog">
                                 <div className="title">Title: {item.title}</div>
                                 <div className="content">{item.body}</div>
-                                <button
-                                    style={{ backgroundColor: "white", borderRadius: "3px", order: '1px solid', }}>
-                                    <Link style={{ color: "black", textDecoration: 'none' }} to={`/blog/${item.id}`}>View detail</Link>
-                                </button>
-                                <button onClick={() => { deletePost(item.id) }} style={{ margin: "0 10px", backgroundColor: "white", borderRadius: "3px", order: '1px solid', color: "black" }}>Delete</button>
+                                <div >
+                                    <button
+                                        style={{ minHeight: "30px", minWidth: "80px", backgroundColor: "white", borderRadius: "3px", order: '1px solid', }}>
+                                        <Link style={{ color: "black", textDecoration: 'none' }} to={`/blog/${item.id}`}>View detail</Link>
+                                    </button>
+                                    <button onClick={() => { deletePost(item.id) }} style={{ minHeight: "30px", minWidth: "80px", marginLeft: "10px", backgroundColor: "white", borderRadius: "3px", order: '1px solid', color: "black" }}>Edit</button>
+                                    <button onClick={() => { deletePost(item.id) }} style={{ minHeight: "30px", minWidth: "80px", marginLeft: "10px", backgroundColor: "white", borderRadius: "3px", order: '1px solid', color: "black" }}>Delete</button>
+                                </div>
 
                             </div>
                         )

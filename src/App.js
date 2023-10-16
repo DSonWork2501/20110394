@@ -1,10 +1,5 @@
-import logo from './logo.svg';
 import './App.scss';
 import React, { useState, useEffect } from 'react';
-import Navbar from './component/Layout/Navbar';
-import Todos from './component/Todos';
-import Covid from './component/Pages/Covid';
-import Countdown from './component/Countdown';
 import { Outlet } from 'react-router-dom';
 
 const App = () => {

@@ -8,7 +8,6 @@ const useFetch = (url) => {
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
-
         try {
             async function response() {
                 let res = await axios.get(url);
@@ -31,25 +30,4 @@ const useFetch = (url) => {
         data, isLoading, isError
     }
 }
-// Get data from real online server with axios
-// const response = async () => {
-//     setTimeout(async () => {
-//         try {
-//             let res = await axios.get('https://jsonplaceholder.typicode.com/users123123');
-//             let data = res && res.data ? res.data : [];
-//             setData(data);
-//             setisLoading(false);
-//             setIsError(false);
-//         }
-//         catch (e) {
-//             setIsError(true);
-//             setisLoading(false);
-//             // alert(e.name + ": " + e.message);
-//         }
-//     }, 3000);
-// }
-// useEffect(() => {
-//     response();
-// }, [])
-
 export default useFetch;

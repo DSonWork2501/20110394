@@ -5,10 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 // Page
-import Covid from './component/Pages/Covid';
-import News from './component/Pages/News';
-import Todo from './component/Pages/Todo';
-import Secrect from './component/Pages/Secrect'
 import NotFoundPage from './component/Pages/NotFoundPage';
 import Blog from './component/Pages/Blog';
 import SingleBlog from './component/Pages/SingleBlog';
@@ -19,15 +15,12 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} >
-          <Route path='/timer' element={<News />} />
-          <Route path='/todolist' element={<Todo />} />
-          <Route path='/secrect' element={<Secrect />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/blog/:id' element={<SingleBlog />} />
           <Route path='/addnewblog' element={<AddNewBlog />} />
           <Route path='/404' element={<NotFoundPage />}></Route>
           <Route path="*" element={<Navigate replace to="/404" />}></Route>
-          <Route index element={<Covid />} />
+          <Route index element={<Blog />} />
         </Route>
       </Routes>
     </BrowserRouter>

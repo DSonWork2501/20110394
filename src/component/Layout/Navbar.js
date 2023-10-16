@@ -11,16 +11,7 @@ const Navbar = () => {
     return (
         <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/timer">Timer Apps</Link></li>
             <li><Link to="/blog">Blog Apps</Link></li>
-            <li className="dropdown">
-                {/* <li className='dropbtn'>Dropdown</li> */}
-                <a href="/" style={{ cursor: 'pointer' }} className="dropbtn">Dropdown</a>
-                <div className="dropdown-content">
-                    <Link to="/todolist">Todo Apps</Link>
-                    <Link to="/secrect" state={{ data: data }}>Secret</Link>
-                </div>
-            </li>
         </ul>
     );
 }
