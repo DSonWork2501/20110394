@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import React, { useState, useEffect } from 'react';
 import Navbar from './component/Layout/Navbar';
 import Todos from './component/Todos';

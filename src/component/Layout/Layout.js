@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-import '../../App.css'
+import '../../App.scss'
 const Layout = ({ children }) => {
     return (
         <>

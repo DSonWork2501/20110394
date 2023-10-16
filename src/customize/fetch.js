@@ -3,16 +3,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const useFetch = (url) => {
-    const [dataalbum, setDataalbum] = useState([]);
+    const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
+
         try {
             async function response() {
                 let res = await axios.get(url);
                 let data = res && res.data ? res.data : [];
-                setDataalbum(data);
+                setData(data);
                 setIsLoading(false);
                 setIsError(false);
             }
@@ -24,9 +25,10 @@ const useFetch = (url) => {
             setIsError(true);
             setIsLoading(false);
         }
+
     }, [url]);
     return {
-        dataalbum, isLoading, isError
+        data, isLoading, isError
     }
 }
 // Get data from real online server with axios
@@ -35,7 +37,7 @@ const useFetch = (url) => {
 //         try {
 //             let res = await axios.get('https://jsonplaceholder.typicode.com/users123123');
 //             let data = res && res.data ? res.data : [];
-//             setDataalbum(data);
+//             setData(data);
 //             setisLoading(false);
 //             setIsError(false);
 //         }

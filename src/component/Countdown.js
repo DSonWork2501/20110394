@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 const Countdown = (props) => {
-    const [count, setCount] = useState(10);
+    const [count, setCount] = useState(3);
 
     useEffect(() => {
         if (count === 0) {
-            props.onTimesup();
+            // props.onTimesup();
             return;
         }
         let timer = setInterval(() => {

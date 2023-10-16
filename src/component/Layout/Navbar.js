@@ -12,6 +12,7 @@ const Navbar = () => {
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/timer">Timer Apps</Link></li>
+            <li><Link to="/blog">Blog Apps</Link></li>
             <li className="dropdown">
                 {/* <li className='dropbtn'>Dropdown</li> */}
                 <a href="/" style={{ cursor: 'pointer' }} className="dropbtn">Dropdown</a>
