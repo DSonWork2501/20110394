@@ -56,7 +56,9 @@ const App = () => {
   return (
     <div >
       <div className="app-content">
-        <Outlet />
+        <Outlet
+          todo_trans={todo}
+        />
         {/* <Countdown onTimesup={onTimesup} /> */}
       </div>
     </div >

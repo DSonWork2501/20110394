@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 // Page
 import NotFoundPage from './component/Pages/NotFoundPage';
+import Home from './component/Pages/Home';
 import Blog from './component/Pages/Blog';
 import SingleBlog from './component/Pages/SingleBlog';
 import AddNewBlog from './component/Pages/AddNewBlog';
@@ -20,7 +21,7 @@ root.render(
           <Route path='/addnewblog' element={<AddNewBlog />} />
           <Route path='/404' element={<NotFoundPage />}></Route>
           <Route path="*" element={<Navigate replace to="/404" />}></Route>
-          <Route index element={<Blog />} />
+          <Route index element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

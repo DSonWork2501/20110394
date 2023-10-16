@@ -6,9 +6,7 @@ const Layout = ({ children }) => {
         <>
             <Navbar />
             {/* <div className="App" style={{ background: "#282c34", color: "black" }}> */}
-            <div className='App'>
-                {children}
-            </div>
+            <div className='App'>{children}</div>
         </>
     )
 }

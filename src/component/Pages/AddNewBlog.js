@@ -1,4 +1,4 @@
-import './Blog.scss';
+import '../styles/Blog.scss';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -29,7 +29,7 @@ const AddNewBlog = (props) => {
 
     }
     return (
-        <div className='App' style={{ height: "10px" }}>
+        <div className='App'>
             <div className="add-new-container">
                 <div className="text-add-new">---Add new blogs ---</div>
                 <div className="inputs-data">
